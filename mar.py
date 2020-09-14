@@ -48,13 +48,6 @@ def create_mar_mult(df, missing_column, p_missing, depends_on, threshold, condit
         df_new[missing_column[i]] = tmp[missing_column[i]] 
     return df_new
 
-def create_mar_mult(df, missing_column, p_missing, depends_on, threshold, condition):
-    df_new = df.copy()
-    for i in range(len(missing_column)):
-        tmp = create_mar_single(df, missing_column[i], p_missing, depends_on, threshold, condition)
-        df_new[missing_column[i]] = tmp[missing_column[i]] 
-    return df_new
-
 def create_mar(df, missing_column, p_missing, depends_on, threshold, condition):
     if(type(missing_column) == str):
         df_new = create_mar_single(df, missing_column, p_missing, depends_on, threshold, condition)
