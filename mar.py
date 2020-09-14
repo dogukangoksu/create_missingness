@@ -89,3 +89,4 @@ def test_mar(df, missing_column, p_missing, depends_on,threshold,condition):
     elif (type(missing_column) == list):
         result = test_mar_mult(df, missing_column, p_missing, depends_on,threshold,condition)
     return(result)
+    
